@@ -17,9 +17,10 @@ const Section = ({ id, title, content, animationType, backgroundImage }) => {
       transition={{ duration: 1 }}
       className="min-h-screen flex flex-col items-center justify-center text-white p-8 relative"
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url(${backgroundImage})`, // Ensure this is correct
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        border:'2px solid red',
       }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
