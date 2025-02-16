@@ -22,10 +22,20 @@ const Section = ({ id, title, content, animationType, backgroundImage }) => {
         backgroundPosition: 'center',
       }}
     >
+      {/* Overlay for better readability */}
       <div className="absolute inset-0 bg-black/50 z-0"></div>
-      <div className="relative z-10 max-w-2xl text-center">
-        <h2 className="text-4xl font-bold mb-6">{title}</h2>
-        <p className="text-lg leading-relaxed">{content}</p>
+
+      {/* Content Container */}
+      <div className="relative z-10 max-w-2xl text-center px-4">
+        {/* Title */}
+        <h2 className="text-5xl font-bold mb-8 text-yellow-400">
+          {title}
+        </h2>
+
+        {/* Content */}
+        <p className="text-xl leading-relaxed text-gray-100">
+          {content}
+        </p>
       </div>
     </motion.section>
   );
