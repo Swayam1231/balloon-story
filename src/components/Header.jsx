@@ -6,7 +6,6 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('part1');
 
-  // Function to handle scroll and update active section
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('section');
@@ -23,7 +22,6 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Toggle mobile menu
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -33,7 +31,7 @@ const Header = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="fixed top-0 left-0 w-full bg-black bg-opacity-80 p-4 z-50 shadow-lg"
+      className="fixed top-0 left-0 w-full bg-black/80 p-4 z-50 shadow-lg backdrop-blur-sm"
     >
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-2xl font-bold text-white">The Balloon's Journey</h1>

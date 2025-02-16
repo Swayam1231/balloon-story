@@ -10,7 +10,7 @@ const App = () => {
       title: 'The Beginning',
       content: `Once upon a time, a lone balloon floated into the vast world—its delicate frame soaring like the dreams of a student embarking on a new journey. The streets stretched endlessly below, and the balloon drifted quietly, its fragile spirit dancing with the unknown.`,
       animationType: 'fadeIn',
-      backgroundImage: '/part1.jpg',
+      backgroundImage: '/public/part1.jpg',
     },
     {
       id: 'part2',
