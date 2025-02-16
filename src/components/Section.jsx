@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Section = ({ id, title, content, animationType }) => {
+const Section = ({ id, title, content, animationType, backgroundImage }) => {
   const animations = {
     fadeIn: { initial: { opacity: 0 }, animate: { opacity: 1 } },
     slideInLeft: { initial: { x: -100, opacity: 0 }, animate: { x: 0, opacity: 1 } },
@@ -16,6 +16,11 @@ const Section = ({ id, title, content, animationType }) => {
       whileInView={animations[animationType].animate}
       transition={{ duration: 1 }}
       className="min-h-screen flex flex-col items-center justify-center text-white p-8 relative"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
       <div className="relative z-10 max-w-2xl text-center">
